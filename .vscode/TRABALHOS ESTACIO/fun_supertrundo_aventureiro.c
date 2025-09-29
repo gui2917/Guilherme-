@@ -9,6 +9,8 @@ int main (){
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidadePopulacional1;
+    float pibperCapita1;
 
     char estado2;
     char codigo2[4];
@@ -17,6 +19,8 @@ int main (){
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidadePopulacional2;
+    float pibperCapita2;
 
     printf("\nCRIANDO CARTAS DESAFIO SUPER TRUNFO - NÍVEL NOVATO\n");
     printf("------------------------------------------------------------\n");
@@ -45,7 +49,13 @@ int main (){
     printf("Digite a quantidade de Pontos Turísticos:\n");
     scanf("%d", &pontosTuristicos1);
 
-     printf("======Carta 2=======\n");
+    printf("Cálculo da Carta 1\n");
+
+    densidadePopulacional1 = populacao1 / area1;
+    pibperCapita1 = (pib1 * 1000000000.0) / populacao1;
+
+
+    printf("======Carta 2=======\n");
 
     printf("\nDigite o Estado (A-H):");
     scanf(" %c", &estado2);
@@ -68,6 +78,11 @@ int main (){
     printf("Digite a quantidade de Pontos Turísticos:\n");
     scanf("%d", &pontosTuristicos2);
 
+    printf("Cálculo da Carta 2\n");
+
+    densidadePopulacional2 = populacao2 / area2;
+    pibperCapita2 = (pib2 * 1000000000.0) / populacao2;
+
     printf("EXIBIÇÃO DOS DADOS\n");
 
     printf("\n======= CARTA 1 ======\n");
@@ -79,9 +94,12 @@ int main (){
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f\n", densidadePopulacional1);
+    printf("Pib Per Capita: %.2f\n", pibperCapita1);
 
      printf("\n======= CARTA 2 ======\n");
 
+   
     printf("\nEstado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
@@ -89,6 +107,8 @@ int main (){
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f\n", densidadePopulacional2);
+    printf("Pib Per Capita: %.2f\n", pibperCapita2);
 
 
 
